@@ -11,22 +11,24 @@ void main() => runApp(MaterialApp(
 class home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-    appBar: AppBar(
-      title:  Text('OUR LADY OF THE BAY'),
-      centerTitle: true,
-      backgroundColor: Colors.red[600],
-    ),
-    body: Center(
-      child: Image(
-        image: AssetImage('assets/space1.jpg'),
-        )       
-    ),  
-    floatingActionButton: FloatingActionButton(
-      onPressed: () {  },
-      child: Text("Click"),
-      backgroundColor: Colors.red[600],
+    return SafeArea(
+      child: Scaffold(
+      appBar: AppBar(
+        title:  Text('OUR LADY OF THE BAY'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
       ),
-  );
+      body: Center(
+        child: Image(
+          image: AssetImage('assets/space1.jpg'),
+          )       
+      ),  
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {  },
+        child: Text("Click"),
+        backgroundColor: Colors.red[600],
+        ),
+      ),
+    );
   }
 }
